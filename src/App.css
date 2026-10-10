@@ -1,0 +1,2079 @@
+```css
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f7f5;
+  color: #1d2b22;
+}
+
+button {
+  font-family: inherit;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.sidebar {
+  width: 245px;
+  min-height: 100vh;
+  background: #123c28;
+  color: white;
+  padding: 22px 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo,
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 5px 10px 25px;
+}
+
+.logo-icon,
+.brand-icon {
+  width: 42px;
+  height: 42px;
+  background: #2e9b58;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 22px;
+}
+
+.logo h2,
+.brand h2 {
+  margin: 0;
+  font-size: 17px;
+}
+
+.logo span,
+.brand span {
+  font-size: 11px;
+  color: #b8d4c2;
+}
+
+.menu,
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-item {
+  border: none;
+  background: transparent;
+  color: #c5d9cc;
+
+  padding: 12px 13px;
+  border-radius: 8px;
+
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.menu-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+}
+
+.menu-item.active {
+  background: #2b8f50;
+  color: white;
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+}
+
+.system-status {
+  color: #b8d4c2;
+  font-size: 12px;
+  padding: 10px;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #49c878;
+  border-radius: 50%;
+  margin-right: 7px;
+}
+
+
+/* =========================================
+   MAIN LAYOUT
+========================================= */
+
+.main,
+.main-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.main-content {
+  background: #f4f7f5;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.topbar,
+.top-header {
+  height: 82px;
+  background: white;
+  border-bottom: 1px solid #e4e9e5;
+
+  padding: 18px 30px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar h1,
+.top-header h1 {
+  margin: 0;
+  font-size: 23px;
+  color: #26352c;
+}
+
+.topbar p,
+.top-header p {
+  margin: 5px 0 0;
+  color: #7a877e;
+  font-size: 13px;
+}
+
+.header-date {
+  color: #68766d;
+  font-size: 13px;
+}
+
+
+/* =========================================
+   PAGE CONTENT
+========================================= */
+
+.page,
+.page-content {
+  padding: 25px 30px;
+}
+
+
+/* =========================================
+   STATS
+========================================= */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.stat-card {
+  background: white;
+  border: 1px solid #e5ebe6;
+  border-radius: 12px;
+
+  padding: 20px;
+
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.stat-card > span {
+  font-size: 25px;
+}
+
+.stat-card .stat-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.stat-card .stat-icon.green {
+  background: #e8f7ed;
+}
+
+.stat-card .stat-icon.blue {
+  background: #eaf3f8;
+}
+
+.stat-card .stat-icon.orange {
+  background: #fff3df;
+}
+
+.stat-card .stat-icon.red {
+  background: #fdeaea;
+}
+
+.stat-card > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-card > div:last-child span {
+  display: block;
+  font-size: 12px;
+  color: #7b877f;
+}
+
+.stat-card > div:last-child strong {
+  display: block;
+  font-size: 23px;
+  color: #26352c;
+}
+
+
+/* =========================================
+   GENERAL CARDS
+========================================= */
+
+.card {
+  background: white;
+  border: 1px solid #e5ebe6;
+  border-radius: 12px;
+  padding: 21px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #26352c;
+}
+
+.card-header p {
+  margin: 5px 0 0;
+  color: #7d887f;
+  font-size: 12px;
+}
+
+.card-header > div > span {
+  display: block;
+  margin-top: 5px;
+  color: #7d887f;
+  font-size: 12px;
+}
+
+
+/* =========================================
+   FARM INFORMATION
+========================================= */
+
+.farm-info-grid,
+.farm-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.farm-info-grid > div,
+.farm-details > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.farm-info-grid span,
+.farm-details span {
+  display: block;
+  color: #849087;
+  font-size: 12px;
+}
+
+.farm-info-grid strong,
+.farm-details strong {
+  display: block;
+  font-size: 14px;
+  color: #26352c;
+}
+
+.health-badge,
+.healthy-badge {
+  background: #e8f7ed;
+  color: #198447 !important;
+
+  padding: 6px 10px;
+  border-radius: 20px;
+
+  font-size: 11px !important;
+}
+
+
+/* =========================================
+   SATELLITE ANALYSIS
+========================================= */
+
+.analysis-content {
+  margin-top: 25px;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.analysis-number {
+  font-size: 30px;
+  font-weight: 700;
+  color: #188346;
+}
+
+.analysis-content strong {
+  display: block;
+  font-size: 14px;
+}
+
+.analysis-content p {
+  margin: 5px 0 0;
+  color: #718077;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.analysis-badge {
+  background: #e8f7ed;
+  color: #198447 !important;
+
+  padding: 6px 10px;
+  border-radius: 20px;
+
+  font-size: 11px !important;
+}
+
+
+/* =========================================
+   REPORT
+========================================= */
+
+.report-icon,
+.alert-icon {
+  font-size: 18px !important;
+}
+
+.report-row {
+  margin-top: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 15px;
+}
+
+.report-row > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.report-row strong {
+  font-size: 13px;
+}
+
+.report-row span {
+  font-size: 11px;
+  color: #7b877f;
+}
+
+.outline-button,
+.secondary-btn {
+  background: white;
+  border: 1px solid #cfd8d1;
+
+  padding: 8px 12px;
+  border-radius: 6px;
+
+  cursor: pointer;
+  font-size: 12px;
+}
+
+
+/* =========================================
+   ALERTS
+========================================= */
+
+.alert-row,
+.alert-item {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.alert-row > div,
+.alert-item > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.alert-row strong,
+.alert-item strong {
+  font-size: 13px;
+}
+
+.alert-row span:not(.alert-dot),
+.alert-item p {
+  font-size: 11px;
+  color: #7c8880;
+}
+
+.alert-item p {
+  margin: 4px 0 0;
+}
+
+.alert-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.alert-dot.orange,
+.orange {
+  background: #e79b35;
+}
+
+.alert-dot.red,
+.red {
+  background: #db5252;
+}
+
+
+/* =========================================
+   OPEN MONITORING
+========================================= */
+
+.open-monitoring {
+  margin-top: 18px;
+
+  background: white;
+  border: 1px solid #e5ebe6;
+  border-radius: 12px;
+
+  padding: 18px 21px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.open-monitoring h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #26352c;
+}
+
+.open-monitoring p {
+  margin: 5px 0 0;
+  color: #7b877f;
+  font-size: 12px;
+}
+
+.open-monitoring button,
+.monitor-btn {
+  border: none;
+  background: #1e8547;
+  color: white;
+
+  padding: 10px 15px;
+  border-radius: 7px;
+
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.monitor-btn {
+  margin-top: 22px;
+}
+
+
+/* =========================================
+   FARM MONITORING
+========================================= */
+
+.farm-monitoring-page {
+  padding: 22px 28px;
+}
+
+.monitoring-header,
+.monitoring-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.monitoring-header h2,
+.monitoring-intro h2 {
+  margin: 0;
+  font-size: 19px;
+  color: #26352c;
+}
+
+.monitoring-header p,
+.monitoring-intro p {
+  margin: 5px 0 0;
+  color: #7a877e;
+  font-size: 13px;
+}
+
+.monitoring-status {
+  background: #e9f7ee;
+  color: #188346;
+
+  padding: 8px 12px;
+  border-radius: 20px;
+
+  font-size: 12px;
+}
+
+.monitoring-status span {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+
+  background: #27a653;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+
+/* =========================================
+   MAP
+========================================= */
+
+.map-card,
+.map-container-card {
+  background: white;
+  padding: 8px;
+  border-radius: 13px;
+  border: 1px solid #dfe7e1;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.map-wrapper {
+  height: 570px;
+  width: 100%;
+  position: relative;
+
+  border-radius: 9px;
+  overflow: hidden;
+}
+
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+}
+
+
+/* =========================================
+   MAP SEARCH
+========================================= */
+
+.map-search {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+
+  z-index: 1000;
+
+  display: flex;
+
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.map-search input {
+  width: 250px;
+  height: 38px;
+
+  border: none;
+  outline: none;
+
+  padding: 0 12px;
+  font-size: 13px;
+}
+
+.map-search button {
+  width: 42px;
+  height: 38px;
+
+  border: none;
+  background: #16833d;
+  color: white;
+
+  cursor: pointer;
+}
+
+.map-search button:disabled {
+  opacity: 0.7;
+}
+
+
+/* =========================================
+   LIVE LOCATION
+========================================= */
+
+.map-location-button {
+  position: absolute;
+
+  top: 62px;
+  left: 14px;
+
+  z-index: 1000;
+
+  height: 38px;
+  padding: 0 14px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: white;
+  color: #16833d;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.map-location-button:hover {
+  background: #f2f7f3;
+}
+
+
+/* =========================================
+   MAP LAYER CONTROL
+========================================= */
+
+.leaflet-control-layers {
+  margin-top: 14px !important;
+  margin-right: 14px !important;
+
+  border: none !important;
+  border-radius: 9px !important;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25) !important;
+}
+
+
+/* =========================================
+   MAP INFO CARDS
+========================================= */
+
+.map-info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-top: 16px;
+}
+
+.info-card {
+  background: white;
+
+  border: 1px solid #e3e9e4;
+  border-radius: 10px;
+
+  padding: 15px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.info-icon {
+  font-size: 22px;
+}
+
+.info-card small {
+  display: block;
+  color: #7b877f;
+  font-size: 11px;
+  margin-bottom: 4px;
+}
+
+.info-card strong {
+  font-size: 13px;
+}
+
+
+/* =========================================
+   FARM DRAWING CONTROLS
+========================================= */
+
+.draw-farm-button,
+.finish-farm-button,
+.cancel-drawing-button,
+.clear-farm-button {
+  position: absolute;
+  left: 14px;
+  z-index: 1000;
+
+  height: 38px;
+  padding: 0 14px;
+
+  border: none;
+  border-radius: 8px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.draw-farm-button {
+  top: 110px;
+  background: white;
+  color: #16833d;
+}
+
+.finish-farm-button {
+  top: 110px;
+  background: #16833d;
+  color: white;
+}
+
+.cancel-drawing-button {
+  top: 156px;
+  background: white;
+  color: #c33;
+}
+
+.clear-farm-button {
+  top: 110px;
+  background: white;
+  color: #c33;
+}
+
+.draw-farm-button:hover,
+.clear-farm-button:hover,
+.cancel-drawing-button:hover {
+  background: #f2f7f3;
+}
+
+.finish-farm-button:hover {
+  background: #116b32;
+}
+
+
+/* =========================================
+   DRAWING HINT
+========================================= */
+
+.drawing-hint {
+  position: absolute;
+
+  top: 202px;
+  left: 14px;
+
+  z-index: 1000;
+
+  background: rgba(18, 60, 40, 0.95);
+  color: white;
+
+  padding: 8px 12px;
+  border-radius: 7px;
+
+  font-size: 11px;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   FARM AREA CARD
+========================================= */
+
+.farm-area-card {
+  display: none !important;
+}
+
+
+/* =========================================
+   SELECTED FARM
+========================================= */
+
+.selected-farm-section {
+  margin-top: 18px;
+}
+
+.section-title {
+  margin-bottom: 12px;
+}
+
+.section-title h2 {
+  margin: 0;
+  font-size: 17px;
+  color: #26352c;
+}
+
+.section-title p {
+  margin: 4px 0 0;
+  color: #7a877e;
+  font-size: 12px;
+}
+
+.farm-details-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.farm-detail-card {
+  background: white;
+  border: 1px solid #e3e9e4;
+  border-radius: 10px;
+
+  padding: 15px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.detail-icon {
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.farm-detail-card div {
+  min-width: 0;
+}
+
+.farm-detail-card span:not(.detail-icon) {
+  display: block;
+  color: #7b877f;
+  font-size: 11px;
+  margin-bottom: 4px;
+}
+
+.farm-detail-card strong {
+  display: block;
+  font-size: 13px;
+  color: #26352c;
+}
+
+.farm-detail-card small {
+  display: block;
+  margin-top: 3px;
+  color: #849087;
+  font-size: 10px;
+}
+
+.health-text {
+  color: #188346 !important;
+}
+
+
+/* =========================================
+   POPUP
+========================================= */
+
+.location-popup h3 {
+  margin: 0 0 8px;
+}
+
+.location-popup p {
+  margin: 5px 0;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   COMING SOON
+========================================= */
+
+.coming-soon {
+  height: calc(100vh - 82px);
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #66736a;
+}
+
+.coming-soon-card {
+  min-height: 400px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  color: #66736a;
+}
+
+.coming-icon,
+.coming-soon-card .coming-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.coming-soon h2,
+.coming-soon-card h2 {
+  color: #26352c;
+}
+
+.coming-soon p,
+.coming-soon-card p {
+  font-size: 13px;
+}
+
+.coming-soon-card p {
+  margin: 0 0 5px;
+}
+
+.coming-soon-card span {
+  font-size: 12px;
+}
+
+
+/* =========================================
+   LANGUAGE SWITCHER
+========================================= */
+
+.language-switcher {
+  display: flex;
+  gap: 4px;
+
+  background: #f1f5f2;
+  padding: 4px;
+  border-radius: 7px;
+}
+
+.language-switcher button {
+  border: none;
+  background: transparent;
+
+  padding: 6px 10px;
+  border-radius: 5px;
+
+  font-size: 11px;
+  cursor: pointer;
+  color: #66736a;
+}
+
+.language-switcher button.active {
+  background: white;
+  color: #16833d;
+  font-weight: 600;
+}
+
+
+/* =========================================
+   LOGIN SCREEN
+========================================= */
+
+.login-page {
+  position: fixed !important;
+
+  top: 0 !important;
+  left: 0 !important;
+
+  width: 100vw !important;
+  height: 100vh !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  box-sizing: border-box !important;
+
+  background: #f4f7f5;
+
+  z-index: 99999;
+}
+
+.login-card {
+  position: absolute !important;
+
+  top: 50% !important;
+  left: 50% !important;
+
+  transform: translate(-50%, -50%) !important;
+
+  width: 420px;
+  max-width: calc(100vw - 40px);
+
+  margin: 0 !important;
+  padding: 38px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+  border-radius: 18px;
+
+  text-align: center;
+
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+}
+
+.login-card h1 {
+  margin: 0;
+  font-size: 27px;
+  color: #26342b;
+}
+
+.login-subtitle {
+  margin: 8px 0 30px;
+  color: #7a857e;
+  font-size: 13px;
+}
+
+.login-card h3 {
+  margin: 0 0 15px;
+  color: #35423a;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+
+/* =========================================
+   LOGIN ROLE SELECTION
+========================================= */
+
+.role-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.role-card {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  padding: 16px;
+
+  border: 1px solid #e1e8e3;
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  cursor: pointer;
+  text-align: left;
+
+  transition: 0.2s ease;
+  box-sizing: border-box;
+}
+
+.role-card:hover {
+  border-color: #16833d;
+  background: #f7fcf8;
+  transform: translateY(-1px);
+}
+
+.role-icon {
+  width: 45px;
+  height: 45px;
+  min-width: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eef8f0;
+  border-radius: 10px;
+
+  font-size: 23px;
+}
+
+.role-card strong {
+  display: block;
+  margin-bottom: 4px;
+
+  color: #26342b;
+  font-size: 14px;
+}
+
+.role-card small {
+  display: block;
+
+  color: #7b857e;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+
+/* =========================================
+   LOGIN LANGUAGE
+========================================= */
+
+.login-language {
+  margin-top: 25px;
+
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.login-language button {
+  border: none;
+
+  background: #f1f4f2;
+  color: #68736c;
+
+  padding: 7px 13px;
+  border-radius: 6px;
+
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.login-language button:hover {
+  background: #e6eee8;
+}
+
+.login-language button.active {
+  background: #16833d;
+  color: #ffffff;
+}
+
+
+/* =========================================
+   AUTH LOGIN
+========================================= */
+
+.auth-card {
+  position: relative;
+}
+
+.back-role-button {
+  position: absolute;
+
+  top: 18px;
+  left: 20px;
+
+  border: none;
+  background: transparent;
+
+  color: #16833d;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+
+  text-align: left;
+
+  gap: 7px;
+  margin-top: 20px;
+}
+
+.auth-form label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #35423a;
+  margin-top: 5px;
+}
+
+.auth-form input,
+.auth-form input[type="text"],
+.auth-form input[type="password"] {
+  width: 100%;
+  height: 43px;
+
+  padding: 0 12px;
+
+  border: 1px solid #dce5df;
+  border-radius: 8px;
+
+  box-sizing: border-box;
+  outline: none;
+
+  font-size: 13px;
+
+  color: #1f2a24 !important;
+  background: #ffffff !important;
+
+  caret-color: #16833d !important;
+  opacity: 1 !important;
+}
+
+.auth-form input::placeholder {
+  color: #9aa49e !important;
+  opacity: 1 !important;
+}
+
+.auth-form input:focus {
+  color: #1f2a24 !important;
+  background: #ffffff !important;
+
+  border-color: #16833d !important;
+
+  box-shadow: 0 0 0 2px rgba(22, 131, 61, 0.08);
+
+  outline: none !important;
+}
+
+
+/* =========================================
+   PASSWORD
+========================================= */
+
+.password-field {
+  position: relative;
+  width: 100%;
+}
+
+.password-field input {
+  padding-right: 45px;
+  color: #1f2a24 !important;
+  background: #ffffff !important;
+}
+
+.password-toggle {
+  position: absolute;
+
+  right: 5px;
+  top: 4px;
+
+  height: 35px;
+  width: 35px;
+
+  border: none;
+  background: transparent;
+
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
+/* =========================================
+   LOGIN BUTTON
+========================================= */
+
+.login-submit {
+  width: 100%;
+  height: 44px;
+
+  margin-top: 10px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #16833d;
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.login-submit:hover {
+  background: #116d32;
+}
+
+
+/* =========================================
+   LOGIN ERROR / DEMO
+========================================= */
+
+.login-error {
+  padding: 9px 10px;
+  margin-top: 5px;
+
+  border-radius: 7px;
+
+  background: #fff1f1;
+  color: #c62828;
+
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.demo-hint {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+
+  margin-top: 16px;
+  padding: 10px;
+
+  border-radius: 8px;
+
+  background: #f4f8f5;
+  color: #68736c;
+
+  font-size: 10px;
+}
+
+.demo-hint strong {
+  color: #35423a;
+  font-size: 11px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .farm-details-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .map-info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 1000px) {
+
+  .farm-details-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 800px) {
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .open-monitoring {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}
+
+
+@media (max-width: 700px) {
+
+  .sidebar {
+    width: 70px;
+  }
+
+  .logo div:last-child,
+  .brand div:last-child {
+    display: none;
+  }
+
+  .menu-item {
+    font-size: 0;
+  }
+
+  .menu-item span {
+    font-size: 18px;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .map-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .farm-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .map-wrapper {
+    height: 500px;
+  }
+
+  .map-search {
+    left: 10px;
+    top: 10px;
+  }
+
+  .map-search input {
+    width: 200px;
+  }
+
+  .map-location-button {
+    left: 10px;
+    top: 58px;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .farm-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .top-header {
+    padding: 15px;
+  }
+
+  .page-content {
+    padding: 18px;
+  }
+}
+```
+/* =========================================
+   SATELLITE + FARM MAP CONTROLS
+========================================= */
+
+.map-wrapper,
+.satellite-map-wrapper {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  min-height: 520px;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+/* Leaflet map must have height */
+.map-wrapper .leaflet-container,
+.satellite-map-wrapper .leaflet-container {
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  border-radius: 14px;
+  z-index: 1;
+}
+
+/* =========================================
+   SEARCH BOX
+========================================= */
+
+.map-search,
+.satellite-search {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+
+  display: flex;
+  align-items: center;
+
+  width: 280px;
+  height: 40px;
+
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid #dfe7e2;
+  border-radius: 10px;
+
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.map-search input,
+.satellite-search input {
+  flex: 1;
+
+  height: 100%;
+  min-width: 0;
+
+  border: none;
+  outline: none;
+
+  padding: 0 12px;
+
+  font-size: 13px;
+  color: #26352c;
+
+  background: transparent;
+}
+
+.map-search input::placeholder,
+.satellite-search input::placeholder {
+  color: #8a968e;
+}
+
+.map-search button,
+.satellite-search button {
+  width: 42px;
+  height: 100%;
+
+  border: none;
+  border-left: 1px solid #e5ebe7;
+
+  background: #ffffff;
+
+  cursor: pointer;
+
+  font-size: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-search button:hover,
+.satellite-search button:hover {
+  background: #f1f8f3;
+}
+
+/* =========================================
+   LIVE LOCATION BUTTON
+========================================= */
+
+.map-location-button,
+.satellite-live-button {
+  position: absolute;
+
+  top: 65px;
+  left: 15px;
+
+  height: 38px;
+  padding: 0 13px;
+
+  border: 1px solid #dfe7e2;
+  border-radius: 9px;
+
+  background: rgba(255, 255, 255, 0.96);
+  color: #176f3a;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.11);
+
+  cursor: pointer;
+
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.15s ease;
+}
+
+.map-location-button:hover,
+.satellite-live-button:hover {
+  background: #f1f8f3;
+  border-color: #b9d8c3;
+}
+
+/* =========================================
+   LEAFLET ZOOM BUTTONS
+========================================= */
+
+.map-wrapper .leaflet-control-zoom,
+.satellite-map-wrapper .leaflet-control-zoom {
+  margin-top: 15px !important;
+  margin-right: 15px !important;
+
+  border: none !important;
+
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12) !important;
+}
+
+.map-wrapper .leaflet-control-zoom a,
+.satellite-map-wrapper .leaflet-control-zoom a {
+  width: 34px !important;
+  height: 34px !important;
+
+  line-height: 34px !important;
+
+  background: rgba(255, 255, 255, 0.96) !important;
+
+  color: #34423a !important;
+
+  border: none !important;
+}
+
+.map-wrapper .leaflet-control-zoom a:first-child,
+.satellite-map-wrapper .leaflet-control-zoom a:first-child {
+  border-radius: 8px 8px 0 0 !important;
+}
+
+.map-wrapper .leaflet-control-zoom a:last-child,
+.satellite-map-wrapper .leaflet-control-zoom a:last-child {
+  border-radius: 0 0 8px 8px !important;
+}
+
+/* =========================================
+   LAYER CONTROL
+========================================= */
+
+.map-wrapper .leaflet-control-layers,
+.satellite-map-wrapper .leaflet-control-layers {
+  margin-right: 15px !important;
+  margin-bottom: 15px !important;
+
+  border: none !important;
+  border-radius: 9px !important;
+
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12) !important;
+
+  background: rgba(255, 255, 255, 0.96) !important;
+}
+
+/* =========================================
+   DRAW FARM BUTTONS
+========================================= */
+
+.draw-farm-button,
+.finish-farm-button,
+.cancel-drawing-button,
+.clear-farm-button {
+  position: absolute;
+
+  left: 15px;
+
+  z-index: 1000;
+
+  border: none;
+  border-radius: 9px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+/* Normal draw button */
+
+.draw-farm-button {
+  top: 112px;
+
+  height: 38px;
+  padding: 0 14px;
+
+  background: #16833d;
+  color: white;
+}
+
+/* Finish */
+
+.finish-farm-button {
+  top: 112px;
+
+  height: 38px;
+  padding: 0 14px;
+
+  background: #16833d;
+  color: white;
+}
+
+/* Cancel */
+
+.cancel-drawing-button {
+  top: 112px;
+  left: 145px;
+
+  height: 38px;
+  padding: 0 14px;
+
+  background: white;
+  color: #c0392b;
+
+  border: 1px solid #ead2cf;
+}
+
+/* Clear */
+
+.clear-farm-button {
+  top: 112px;
+
+  height: 38px;
+  padding: 0 14px;
+
+  background: white;
+  color: #c0392b;
+
+  border: 1px solid #ead2cf;
+}
+
+/* =========================================
+   DRAWING HINT
+========================================= */
+
+.drawing-hint {
+  position: absolute;
+
+  top: 15px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  z-index: 1000;
+
+  background: rgba(22, 131, 61, 0.95);
+  color: white;
+
+  padding: 9px 14px;
+
+  border-radius: 8px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+
+  pointer-events: none;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .map-wrapper,
+  .satellite-map-wrapper {
+    height: 430px;
+    min-height: 430px;
+  }
+
+  .map-wrapper .leaflet-container,
+  .satellite-map-wrapper .leaflet-container {
+    min-height: 430px;
+  }
+
+  .map-search,
+  .satellite-search {
+    width: calc(100% - 85px);
+    max-width: 260px;
+  }
+
+}
+```css
+/* =========================================
+   SENTINEL-2 ANALYSIS
+========================================= */
+
+.sentinel-analysis {
+  margin-top: 18px;
+  padding: 22px;
+  background: #ffffff;
+  border: 1px solid #e4e9e6;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.sentinel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.sentinel-header h3 {
+  margin: 0;
+  color: #173d28;
+  font-size: 20px;
+}
+
+.sentinel-header p {
+  margin: 6px 0 0;
+  color: #718078;
+  font-size: 13px;
+}
+
+.sentinel-badge {
+  background: #e9f7ee;
+  color: #16833d;
+  padding: 8px 13px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.sentinel-info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.sentinel-info-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  background: #f8faf9;
+  border: 1px solid #e7ece9;
+  border-radius: 12px;
+}
+
+.sentinel-info-card > span {
+  font-size: 24px;
+}
+
+.sentinel-info-card div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sentinel-info-card small {
+  color: #7b8780;
+  font-size: 11px;
+}
+
+.sentinel-info-card strong {
+  color: #1d3025;
+  font-size: 14px;
+}
+
+.sentinel-analyze-button {
+  width: 100%;
+  border: none;
+  border-radius: 11px;
+  padding: 13px 18px;
+  background: #16833d;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.sentinel-analyze-button:hover {
+  background: #116b32;
+  transform: translateY(-1px);
+}
+
+.sentinel-analyze-button:disabled {
+  background: #8db69b;
+  cursor: wait;
+  transform: none;
+}
+
+/* =========================================
+   SENTINEL RESULT
+========================================= */
+
+.sentinel-result {
+  margin-top: 18px;
+  padding: 18px;
+  background: #f8fbf9;
+  border: 1px solid #dce9df;
+  border-radius: 14px;
+}
+
+.sentinel-result-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.sentinel-result-header h4 {
+  margin: 0;
+  color: #173d28;
+  font-size: 16px;
+}
+
+.sentinel-result-header span {
+  display: block;
+  margin-top: 4px;
+  color: #7a877f;
+  font-size: 12px;
+}
+
+.health-result-badge {
+  background: #e9f7ee;
+  color: #16833d !important;
+  padding: 7px 11px;
+  border-radius: 20px;
+  font-size: 12px !important;
+  font-weight: 700;
+  margin: 0 !important;
+}
+
+.sentinel-result-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.sentinel-result-grid > div {
+  background: #ffffff;
+  border: 1px solid #e5ebe7;
+  border-radius: 11px;
+  padding: 14px;
+}
+
+.sentinel-result-grid small {
+  display: block;
+  color: #7a877f;
+  font-size: 11px;
+  margin-bottom: 7px;
+}
+
+.sentinel-result-grid strong {
+  display: block;
+  color: #1d3025;
+  font-size: 14px;
+}
+
+.ndvi-value {
+  color: #16833d !important;
+  font-size: 20px !important;
+}
+
+.health-value {
+  color: #16833d !important;
+}
+
+.sentinel-message {
+  margin-top: 14px;
+  padding: 14px;
+  background: #edf8f1;
+  border-left: 4px solid #16833d;
+  border-radius: 8px;
+}
+
+.sentinel-message strong {
+  color: #176b38;
+  font-size: 13px;
+}
+
+.sentinel-message p {
+  margin: 6px 0 0;
+  color: #587062;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.sentinel-next-step {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-top: 12px;
+  padding: 12px 14px;
+  background: #ffffff;
+  border: 1px dashed #cbd9cf;
+  border-radius: 9px;
+}
+
+.sentinel-next-step span {
+  color: #7a877f;
+  font-size: 11px;
+}
+
+.sentinel-next-step strong {
+  color: #16833d;
+  font-size: 12px;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+  .sentinel-info-grid,
+  .sentinel-result-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .sentinel-header,
+  .sentinel-result-header,
+  .sentinel-next-step {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .sentinel-info-grid,
+  .sentinel-result-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sentinel-analysis {
+    padding: 16px;
+  }
+}
+.alert-dot.green {
+  background: #27a653;
+}
